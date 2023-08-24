@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const port = 3000
-const root='/home/arsalan/Documents/Work_Docker/Nodejs_docker_img/'
+// const root='/home/arsalan/Documents/Work_Docker/Nodejs_docker_img/'
 // var options = {
 //     dotfiles: 'allow',
 //     etag: false,
@@ -14,10 +14,10 @@ const root='/home/arsalan/Documents/Work_Docker/Nodejs_docker_img/'
 //     }
 // } 
 // app.use(express.static(root,options))
-app.use(express.static(root))
+// app.use(express.static(root))
 
-// const path = require('path')
-// app.use(express.static(path.join(__dirname)))
+const path = require('path')
+app.use(express.static(path.join(__dirname)))
 
 
 app.get('/main', (req, res) => {
